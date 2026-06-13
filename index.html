@@ -1,68 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Listing</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
 
-    <link
-      rel="icon"
-      href="resources/favicon.ico"
-      type="image/x-icon"
-      sizes="96x96"
-    />
-
-    <title>Simple Article Listing | devChallenges.io</title>
-
-    <!--You are welcome to delete these styles or modify them in your own stylesheet -->
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; padding: 20px; }
 
-      body {
-        height: 100vh;
-      }
+        .container { max-width: 800px; margin: 0 auto; }
 
-      .author-info {
-        font-size: 14px;
-        text-align: center;
-        margin-top: 16px;
-        color: rgb(55, 65, 81);
-      }
+        h2 {
+            font-weight: 600;
+            font-size: 2.25rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-      .author-info a {
-        text-decoration: none;
-      }
+        .separator {
+            display: block;
+            margin: 0 auto 40px auto;
+            width: 100px;
+        }
+
+        .article-list {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .article-card {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .article-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 15px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .content h3 {
+            font-weight: 600;
+            font-size: 1.25rem;
+            margin-bottom: 5px;
+        }
+
+        .content .date {
+            font-weight: 500;
+            font-size: 0.875rem;
+            color: #666;
+        }
     </style>
-  </head>
-  <body>
-    <!-- 
+</head>
+<body>
 
-      We release interesting articles about technology
-    
-      Unlocking the Power of Cloud Computing
-    
-      A Guide to Scalable Solutions
-    
-      November 12, 2024
-    
-      The Future of AI
-    
-      How Machine Learning is Revolutionizing Industries
-    
-      The Impact of 5G on Business
-    
-      How Faster Networks are Transforming the Way We Work
-    
-    -->
+    <section class="container">
+        <h2>We release interesting articles about technology</h2>
+        <img src="resources/Seperator.svg" class="separator" alt="Separator">
 
-    <div class="author-info">
-      Coded by <a href="#">Your Name Here</a> | Challenge by
-      <a href="https://www.devchallenges.io?ref=challenge" target="_blank"
-        >devChallenges.io</a
-      >.
-    </div>
-  </body>
+        <div class="article-list">
+            <article class="article-card">
+                <img src="resources/photo_1.png" alt="Cloud">
+                <div class="content">
+                    <h3>Unlocking the Power of Cloud Computing: A Guide to Scalable Solutions</h3>
+                    <p class="date">November 12, 2024</p>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <img src="resources/photo_3.png" alt="AI">
+                <div class="content">
+                    <h3>The Future of AI: How Machine Learning is Revolutionizing Industries</h3>
+                    <p class="date">November 12, 2024</p>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <img src="resources/photo_2.png" alt="5G">
+                <div class="content">
+                    <h3>The Impact of 5G on Business: How Faster Networks are Transforming the Way We Work</h3>
+                    <p class="date">November 12, 2024</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+</body>
 </html>
